@@ -8,11 +8,11 @@ Nhóm đang phân tích bài toán người quản lý/mentor phải đọc nhi�
 
 | STT | Họ và tên | Mã học viên | Vai trò trong nhóm |
 |-----|-----------|-------------|--------------------|
-| 1 | Nguyễn Tấn Hoàng | 2A202601198 | Đưa candidate, validation/research, workflow, Problem Statement |
-| 2 |  |  |  |
-| 3 |  |  |  |
-| 4 |  |  |  |
-| 5 |  |  |  |
+| 1 | Nguyễn Tấn Hoàng | 2A202601198 | Thành viên |
+| 2 | Bùi Công Hậu | 2A202601877 | Thành viên |
+| 3 | Nguyễn Minh Hiếu | 2A202601154 | Thành viên |
+| 4 | Nguyễn Trương Ngọc Mai | 2A202601652 | Thành viên |
+| 5 | Nguyễn Trần Gia Phụng | 2A202601286 | Thành viên |
 
 ---
 
