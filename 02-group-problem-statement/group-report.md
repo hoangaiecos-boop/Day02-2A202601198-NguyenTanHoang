@@ -69,18 +69,24 @@ Nhóm dùng score để ép mỗi người nói rõ lý do. Candidate nào có a
 
 ## Quick validation
 
-Trạng thái hiện tại: nhóm chưa có dữ liệu phỏng vấn thật đủ để chốt baseline. Vì vậy phần dưới được ghi theo đúng worksheet như một validation plan + tín hiệu cần thu, không bịa số liệu survey/interview.
+Nhóm dùng **Option A — Quick interviews** và hỏi nhanh 3 người từng phải đọc/tổng hợp report trong dự án hoặc bài tập lớn nhóm.
+
+| Người trả lời | Lần gần nhất gặp vấn đề | Workflow hiện tại | Bước đau nhất | Thời gian | Mong muốn nếu tốt hơn |
+|---|---|---|---|---|---|
+| Nguyễn Minh Hiếu | Đọc report BTL restaurant management | Mở raw report của từng thành viên → đọc, phân tích và nhận xét từng report → tổng hợp ưu/nhược điểm report từng thành viên → ghi feedback → trao đổi với team | Đọc, phân tích và nhận xét từng report | 4-6 tiếng | AI tổng hợp report theo một format chung cố định để rút ngắn thời gian khoảng 4-5 lần |
+| Hậu | Dự án môn học nhóm gồm 5 thành viên | Tạo 1 file chung để mọi người viết báo cáo → cho chatbot review → đọc và nhận xét báo cáo từng người → chỉnh sửa nội dung chưa hợp lý → hỏi lại lỗi sai | Đọc nội dung báo cáo của từng người | 2-3 tiếng | Thay đổi cách đọc báo cáo từng người vì rất mất thời gian |
+| Ngọc Mai | Đọc báo cáo BTL môn học trên trường | Đọc thủ công nhiều báo cáo không đồng format → đối chiếu deadline → tự tổng hợp nhận định → ghi chú và hỏi lại team | Đọc và tổng hợp thủ công từng báo cáo | Vài ngày | Giảm thời gian tổng hợp và hệ thống tự gợi ý câu hỏi |
 
 | Nguồn | Số người / số mẫu | Tín hiệu xác nhận | Tín hiệu phản bác | Nhóm sửa problem thế nào |
 |---|---:|---|---|---|
-| Quick interview | Cần hỏi 2-3 người quản lý/mentor/team lead | Họ phải đọc nhiều report/update thủ công; bước đau nhất là tổng hợp trạng thái, blocker, next step | Họ đã có dashboard/task board rõ và gần như không đọc report rời rạc | Thu hẹp problem vào "report rời rạc, không cùng format, chưa có dashboard chuẩn" |
-| Micro survey / poll | Cần hỏi 5-10 người từng quản lý/làm project | Nhiều người đánh giá mức đáng giải quyết 4-5/5; hay phải hỏi lại vì thiếu status/blocker | Đa số nói chỉ cần template hoặc calendar/checklist là đủ | Điều chỉnh solution về template/process trước, AI chỉ hỗ trợ phần tóm tắt |
-| Log / review / ticket | Cần xem 1-2 report gần nhất | Report thiếu owner/status/deadline/blocker hoặc mỗi người viết một kiểu | Report đã có field đầy đủ, task rõ owner/status/deadline | Nếu vấn đề chính là format, ưu tiên chuẩn hóa report trước khi dùng AI |
+| Quick interview | 3 người | Cả 3 đều gặp pain khi đọc/tổng hợp report thủ công; thời gian dao động từ 2-3 tiếng, 4-6 tiếng đến vài ngày; bước đau nhất đều là đọc/phân tích/tổng hợp report | Chưa có phản bác mạnh; Hậu đã thử dùng chatbot review nhưng vẫn phải đọc và sửa nhiều | Thu hẹp problem vào "đọc và tổng hợp nhiều report không đồng format để tạo nhận định/feedback nhanh hơn" |
+| Micro survey / poll | Chưa làm | Có thể dùng thêm nếu cần kiểm tra pain trên nhiều người hơn | Chưa có dữ liệu | Không dùng để chốt số liệu hiện tại |
+| Log / review / ticket | Chưa thu report thật | Interview cho thấy report thường không đồng format và cần đối chiếu deadline/feedback | Chưa có mẫu report để kiểm tra lỗi cụ thể | Cần thu 1-2 report thật trước pilot để kiểm prompt và format output |
 
-Insight tạm sau validation:
+Insight sau validation:
 
 ```text
-Pain không nằm ở việc "đọc cho xong report". Pain nằm ở đoạn biến nhiều cập nhật rời rạc thành một bức tranh tiến độ đủ rõ: task nào done, task nào late, blocker nào cần xử lý, và câu hỏi follow-up nào cần gửi lại team.
+Pain thật và lặp lại ở nhiều bối cảnh bài tập lớn/dự án nhóm. Pain không chỉ là "đọc cho xong report", mà là đọc nhiều report không đồng format, phân tích từng phần, tổng hợp nhận định/feedback và hỏi lại khi thiếu thông tin. Baseline hiện có khá nặng: nhanh nhất 2-3 tiếng, có case 4-6 tiếng, và có case mất vài ngày.
 ```
 
 ## Research giải pháp
@@ -106,7 +112,7 @@ Không nên nhảy ngay sang một agent tự đánh giá tiến độ hoàn to�
 ## Current workflow
 
 ```text
-CURRENT STATE — 8 bước, thời gian baseline chưa đo
+CURRENT STATE — 8 bước, baseline interview: 2-3 tiếng đến vài ngày
 
 [1 Team gửi report/cập nhật]
 → [2 Người quản lý mở từng report]
@@ -153,7 +159,7 @@ Before/after impact:
 
 | Metric | Trước | Sau kỳ vọng | Ghi chú |
 |---|---:|---:|---|
-| Tổng thời gian | Chưa đo | Giảm sau khi đo baseline | Không ghi số phút khi chưa có dữ liệu thật |
+| Tổng thời gian | 2-3 tiếng, 4-6 tiếng, có case vài ngày | Giảm 4-5 lần hoặc về dưới 1 giờ cho vòng review đầu | Dựa trên 3 quick interviews |
 | Số bước | 8 | 7 | Giảm ít bước, nhưng giảm effort ở bước tổng hợp |
 | Bước thủ công | 6 | 3 | Người quản lý vẫn review, sửa và quyết định |
 | Bottleneck chính | Tổng hợp report | Review summary và kiểm tra điểm AI chưa chắc | Human boundary |
@@ -166,8 +172,8 @@ Before/after impact:
 | **Actor** | Người quản lý/mentor/team lead cần theo dõi tiến độ dự án. |
 | **Workflow** | Nhận report từ team, đọc từng report, tìm trạng thái task, so sánh với kế hoạch, tổng hợp nhận định, hỏi lại team nếu thiếu thông tin. |
 | **Bottleneck** | Bước tổng hợp thủ công từ nhiều report rời rạc, không cùng format. |
-| **Impact** | Review tiến độ chậm, dễ bỏ sót blocker/task trễ, feedback cho team thiếu kịp thời. |
-| **Success Metric** | Giảm thời gian tổng hợp report so với baseline; giảm số lần phải hỏi lại vì thiếu status/blocker; tăng tỷ lệ task có trạng thái rõ sau review. |
+| **Impact** | Review tiến độ mất từ 2-3 tiếng đến 4-6 tiếng, có case kéo dài vài ngày; dễ bỏ sót blocker/task trễ; feedback cho team thiếu kịp thời. |
+| **Success Metric** | Giảm thời gian tổng hợp report 4-5 lần hoặc về dưới 1 giờ cho vòng review đầu; giảm số lần phải hỏi lại vì thiếu status/blocker; tăng tỷ lệ task có trạng thái rõ sau review. |
 | **Boundary** | AI không tự đánh giá hiệu suất cá nhân, không tự gửi feedback, không thay người quản lý quyết định tiến độ cuối cùng. |
 
 ---
@@ -193,7 +199,7 @@ Vì sao:
 - Rule/template cần có để input sạch hơn.
 - AI hữu ích nhất ở bước đọc hiểu, chuẩn hóa, phân loại và draft summary.
 - Người quản lý vẫn review nên rủi ro kiểm soát được.
-- Chưa cần Agent ngay vì chưa có dữ liệu thật, permission và baseline đủ rõ.
+- Chưa cần Agent ngay vì đã có tín hiệu pain và baseline từ interview, nhưng chưa có report mẫu, quyền truy cập nguồn dữ liệu và boundary vận hành đủ rõ.
 
 ## Problem Statement v1
 
@@ -202,8 +208,8 @@ Vì sao:
 | **Actor** | Người quản lý/mentor/team lead cần theo dõi tiến độ dự án từ report của team. |
 | **Workflow** | Team gửi report → kiểm field bắt buộc → AI chuẩn hóa/phân loại → AI draft summary và câu hỏi follow-up → người quản lý review → gửi feedback. |
 | **Bottleneck** | Tổng hợp thủ công nhiều report rời rạc, không cùng format để biết dự án đang on track, blocked hay late. |
-| **Impact** | Review tiến độ chậm, dễ bỏ sót blocker/task trễ, feedback cho team thiếu kịp thời. |
-| **Success Metric** | Sau pilot: giảm thời gian tổng hợp report so với baseline; tăng tỷ lệ task có trạng thái rõ; giảm số lần hỏi lại vì report thiếu thông tin. |
+| **Impact** | Review tiến độ tốn 2-3 tiếng đến 4-6 tiếng, có trường hợp kéo dài vài ngày; dễ bỏ sót blocker/task trễ, feedback cho team thiếu kịp thời. |
+| **Success Metric** | Sau pilot: giảm thời gian tổng hợp 4-5 lần hoặc về dưới 1 giờ cho vòng review đầu; tăng tỷ lệ task có trạng thái rõ; giảm số lần hỏi lại vì report thiếu thông tin. |
 | **Boundary** | AI không tự gửi feedback, không đánh giá hiệu suất cá nhân, không bịa status nếu report thiếu nguồn; người quản lý kiểm report gốc trước khi dùng output. |
 | **AI intervention point** | Sau khi report được thu thập và trước khi người quản lý viết nhận định tiến độ. |
 | **Mức chọn** | Workflow: rule/template cho input, AI draft summary, người quản lý review. |
@@ -214,14 +220,14 @@ Vì sao:
 Decision:
 
 ```text
-Not Yet — cần validate trước khi Go.
+Go với scope nhỏ.
 ```
 
-Pilot nhỏ nhất nếu đủ validation:
+Pilot nhỏ nhất:
 
 - Chọn 1 team hoặc 1 project nhỏ.
-- Dùng 1 tuần report gần nhất.
-- Người quản lý đo thời gian tổng hợp thủ công làm baseline.
+- Dùng report của một bài tập lớn/dự án nhóm gần nhất.
+- Dùng baseline từ interview: 2-3 tiếng, 4-6 tiếng, vài ngày; đo thêm thời gian thực tế khi chạy pilot.
 - Chạy workflow bán thủ công: paste report vào prompt/template chuẩn.
 - AI tạo summary theo format: health, done, in progress, blocked, risk, next step.
 - Người quản lý đo thời gian review và số lỗi phải sửa.
@@ -235,7 +241,7 @@ Exit / rollback:
 Decision rationale:
 
 - Problem rõ và workflow rõ.
-- Metric đã có hướng đo nhưng chưa có baseline thật.
+- Đã có quick interviews xác nhận pain với baseline thời gian cụ thể.
 - Có non-AI components quan trọng.
 - AI nằm ở một bước cụ thể, không ôm toàn bộ workflow.
 - Human review rõ nên rủi ro chấp nhận được cho pilot nhỏ.
