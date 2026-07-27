@@ -25,22 +25,37 @@ Nhóm đang phân tích bài toán người quản lý/mentor phải đọc nhi�
 | 1 | Nguyễn Tấn Hoàng | Tốn nhiều thời gian đọc report của team dự án để đánh giá tiến độ làm việc và hoàn thành của team | Người quản lý/mentor/team lead | Đọc nhiều report rời rạc, không cùng format, phải tự tổng hợp trạng thái task | Workflow rõ, impact có thể đo |
 | 2 | Nguyễn Tấn Hoàng | Chưa hiểu và không theo kịp chương trình training | Học viên tham gia training | Tự hệ thống lại kiến thức sau buổi học, không biết mình đang thiếu phần nào | Pain thật nhưng scope rộng |
 | 3 | Nguyễn Tấn Hoàng | Quên các lịch workshop, sự kiện của chương trình học tập K20 | Học viên K20 | Lịch nằm rải rác ở nhiều kênh, không tự chuyển thành reminder cá nhân | Dễ giải bằng rule/calendar |
+| 4 | Bùi Công Hậu | Giải mã tài liệu kỹ thuật | Người học/nghiên cứu đọc paper kỹ thuật | Tài liệu nhảy bước toán học, phải tự suy diễn hoặc tra thêm nguồn | Workflow rõ; AI giải thích/verify derivation có thể hỗ trợ mạnh |
+| 5 | Bùi Công Hậu | Chuẩn bị hồ sơ ứng tuyển CV/email | Người ứng tuyển/học viên | Viết bản nháp đầu dễ generic, phải đối chiếu JD với kinh nghiệm cá nhân | Có deadline và impact trực tiếp nhưng metric kết quả chậm |
+| 6 | Bùi Công Hậu | Format báo cáo/slide học thuật | Sinh viên làm báo cáo/slide | Vòng lặp compile/sửa format/căn chỉnh chiếm nhiều thời gian | Rule/Workflow phù hợp, automation cao |
+| 7 | Nguyễn Minh Hiếu | Giải mã tài liệu kỹ thuật | Sinh viên, researcher, developer | Đọc chậm, khó hiểu bản chất toán/thuật toán phức tạp | Use-case AI mạnh nhưng cần tránh "hiểu giả" |
+| 8 | Nguyễn Minh Hiếu | Tối ưu CV và email ứng tuyển theo job | Người đi thực tập/ứng tuyển | Phải sửa thủ công từng CV/email cho mỗi công ty | Pain rõ, có deadline, dễ bị generic nếu thiếu context |
+| 9 | Nguyễn Minh Hiếu | Định dạng báo cáo và slide học thuật | Sinh viên, nghiên cứu sinh | Tốn thời gian chỉnh căn lề, font, citation thay vì nội dung | Tự động hóa cao nhưng cần giữ ranh giới không làm hộ nội dung |
+| 10 | Nguyễn Trương Ngọc Mai | Mất thời gian truy vết hành trình đối tượng qua nhiều camera | Bảo vệ, vận hành camera, ban quản lý | Tua thủ công từng video, ghép nối rời rạc giữa nhiều góc quay | Workflow rõ, pain lớn, đo được bằng thời gian xử lý |
+| 11 | Nguyễn Trương Ngọc Mai | Tìm kiếm đối tượng bằng câu lệnh mô tả tự nhiên quá chậm | Đội điều tra, nhân viên trích xuất camera | Nhìn bằng mắt thường từng khung hình để xem có khớp mô tả hay không | Multimodal AI phù hợp nhưng cần đo độ chính xác matching |
+| 12 | Nguyễn Trương Ngọc Mai | Bỏ sót sự cố do phải soi màn hình 24/7 chờ hành vi bất thường | Bảo vệ ca trực, đội trưởng an ninh | Mỏi mắt, giảm tập trung khi phải chờ sự cố hiếm | Impact lớn nhưng vướng hạ tầng real-time và cảnh báo giả |
+| 13 | Nguyễn Trần Gia Phụng | Khó chọn trang phục phù hợp với thời tiết, địa điểm và tủ đồ | Người chuẩn bị đi làm, đi chơi, dự sự kiện | Khó nhớ toàn bộ tủ đồ và cân nhắc thời tiết, màu sắc, hoàn cảnh | Workflow rõ nhưng taste cá nhân khó đo |
+| 14 | Nguyễn Trần Gia Phụng | Trước kỳ thi không biết nên ôn phần nào vì thông tin rải rác nhiều nguồn | Sinh viên chuẩn bị thi | Phải đọc/so sánh slide, giáo trình, bài tập; thông tin trùng hoặc mâu thuẫn | Workflow rõ, mất 2-4 giờ/môn, input tài liệu đa dạng |
+| 15 | Nguyễn Trần Gia Phụng | Kiểm tra báo cáo thủ công nhiều lần trước khi nộp | Sinh viên viết báo cáo, đồ án, paper | Lỗi chính tả, đánh số, mâu thuẫn nằm rải rác; sửa một chỗ có thể sai chỗ khác | Rule + Workflow phù hợp, có thể đo giảm thời gian kiểm tra |
 
 ## Gom trùng / cluster
 
 | Cluster | Candidate examples | Pattern chung |
 |---|---|---|
-| Báo cáo / tổng hợp thông tin | Đọc report team dự án | Gom nhiều nguồn thông tin rồi viết lại thành trạng thái dễ ra quyết định |
-| Học tập / training | Không theo kịp training | Người học nhận nhiều nội dung mới và cần tự hệ thống lại |
-| Reminder / follow-up | Quên lịch workshop K20 | Thông tin quan trọng bị phân tán, dễ bỏ sót nếu không có nhắc lại |
+| Báo cáo / tổng hợp / kiểm tra tài liệu | Đọc report team dự án; format báo cáo/slide; kiểm tra báo cáo trước khi nộp | Gom, chuẩn hóa hoặc kiểm tra nhiều nội dung rời rạc để tạo output đủ dùng |
+| Học tập / nghiên cứu | Không theo kịp training; giải mã tài liệu kỹ thuật; ôn thi từ nhiều nguồn | Người học phải tự hệ thống kiến thức từ nhiều tài liệu, dễ thiếu hoặc hiểu sai |
+| Reminder / cá nhân hóa quyết định | Quên lịch workshop; chọn trang phục; chuẩn bị CV/email | Cần nhắc đúng lúc hoặc cá nhân hóa theo ngữ cảnh |
+| Camera / an ninh / truy vết | Truy vết hành trình qua nhiều camera; tìm đối tượng bằng mô tả; phát hiện sự cố 24/7 | Dữ liệu hình ảnh/video lớn, cần tìm kiếm hoặc phát hiện nhanh |
 
 ## Shortlist và score
 
 | Candidate | Actor rõ | Workflow rõ | Pain có evidence | Impact đo được | Làm trong lab | So sánh R/W/A được | Nhóm hiểu domain | Tổng |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Đọc report team dự án | 5 | 5 | 3 | 4 | 4 | 5 | 4 | 30 |
+| Đọc report team dự án | 5 | 5 | 4 | 5 | 4 | 5 | 5 | 33 |
+| Kiểm tra báo cáo trước khi nộp | 5 | 5 | 3 | 4 | 5 | 5 | 4 | 31 |
+| Trước kỳ thi không biết nên ôn phần nào | 5 | 4 | 3 | 4 | 4 | 5 | 4 | 29 |
+| Truy vết hành trình qua nhiều camera | 5 | 5 | 3 | 5 | 2 | 5 | 3 | 28 |
 | Quên lịch workshop/sự kiện K20 | 5 | 4 | 3 | 3 | 5 | 3 | 5 | 28 |
-| Không theo kịp training | 5 | 3 | 3 | 3 | 3 | 4 | 4 | 25 |
 
 Nhóm chọn: **Đọc report team dự án**.
 
@@ -54,8 +69,10 @@ Vì sao chọn:
 
 Vì sao không chọn các bài còn lại:
 
-- **Không theo kịp training:** pain thật nhưng rộng, cần thu hẹp vào một buổi học, một dạng tài liệu hoặc một bài lab cụ thể.
-- **Quên lịch workshop/sự kiện K20:** workflow rõ nhưng có thể xử lý bằng calendar/pin message/rule trước, chưa cần làm trọng tâm AI.
+- **Camera/an ninh:** impact lớn nhưng scope kỹ thuật rộng, cần dữ liệu video, hạ tầng real-time và metric độ chính xác phức tạp hơn thời lượng lab.
+- **Học tập/nghiên cứu:** pain thật nhưng quality metric khó hơn, dễ tạo cảm giác "hiểu giả" nếu chưa có bài test/verification rõ.
+- **Format/kiểm tra báo cáo:** workflow rõ và gần với bài được chọn, nhưng thiên về rule/template hơn; nhóm muốn đào sâu bài có yếu tố tổng hợp nhận định và feedback.
+- **Reminder/cá nhân hóa:** một số bài có thể xử lý bằng calendar, checklist hoặc rule đơn giản trước khi cần AI.
 
 Nếu có disagreement:
 
