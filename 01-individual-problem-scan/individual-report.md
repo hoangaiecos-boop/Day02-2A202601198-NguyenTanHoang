@@ -1,4 +1,4 @@
- # Individual Problem Scan — Nguyễn Tấn Hoàng
+# Individual Problem Scan — Nguyễn Tấn Hoàng
 
 ## Phase 1 — Tìm 5+ problems
 
